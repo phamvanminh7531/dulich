@@ -8,7 +8,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="./css/styles.css">
-    <script src="./js/images.js"></script>
+    <script src="./js/dragble-images.js"></script>
+    <script src="https://kit.fontawesome.com/065d57b73d.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <nav class="navbar navbar-expand-lg nav fixed-top">
@@ -63,14 +64,32 @@
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
         <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="https://images2.alphacoders.com/516/516664.jpg" class="d-block w-100 img-gallery" alt="...">
+            <div class="carousel-item active banner-item">
+                <img src="images/banner-1.jpg" class="d-block w-100 img-gallery" alt="...">
+                <div class="carousel-caption  item-caption">
+                  <h1>CHÀO MỪNG ĐẾN VỚI TỈNH
+                    BÌNH DƯƠNG</h1>
+                  <h3>BÌNH DƯƠNG NĂNG ĐỘNG VÀ PHÁT TRIỂN</h3>
+                  <a class="btn btn-warning btn-lg text-light" href="test.html">XEM THÊM</a>
+                </div>
             </div>
-            <div class="carousel-item">
-                <img src="https://wallpapers.com/images/featured/c0pujiakubq5rwas.jpg" class="d-block w-100 img-gallery" alt="...">
+            <div class="carousel-item banner-item">
+                <img src="images/banner-2.jpg" class="d-block w-100 img-gallery" alt="...">
+                <div class="carousel-caption  item-caption">
+                  <h1>CHÀO MỪNG ĐẾN VỚI TỈNH
+                    BÌNH DƯƠNG</h1>
+                  <h3>BÌNH DƯƠNG NĂNG ĐỘNG VÀ PHÁT TRIỂN</h3>
+                  <a class="btn btn-warning btn-lg text-light" href="test.html">XEM THÊM</a>
+                </div>
             </div>
-            <div class="carousel-item">
-                <img src="https://c4.wallpaperflare.com/wallpaper/965/883/624/manga-one-piece-wallpaper-preview.jpg" class="d-block w-100 img-gallery" alt="...">
+            <div class="carousel-item banner-item">
+                <img src="images/banner-3.jpg" class="d-block w-100 img-gallery" alt="...">
+                <div class="carousel-caption  item-caption">
+                  <h1>CHÀO MỪNG ĐẾN VỚI TỈNH
+                    BÌNH DƯƠNG</h1>
+                  <h3>BÌNH DƯƠNG NĂNG ĐỘNG VÀ PHÁT TRIỂN</h3>
+                  <a class="btn btn-warning btn-lg text-light" href="test.html">XEM THÊM</a>
+                </div>
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -84,42 +103,171 @@
     </div>
 </section>
 
-<section class="slider">
-  <button class="slider-control prev"></i></button>
-  <button class="slider-control next"></i></button>
-  <div class="slider-container" data-multislide="false" data-step="4">
-    <div class="slider-item">
-      <img src="https://picsum.photos/id/521/700/700" alt="" width="100%">
+<section class="slider pt-3 pb-3">
+  <div class="container">
+    <div class="row text-center image-header">
+      <div class="col">
+        <h1>ĐIỂM ĐẾN LÝ TƯỞNG</h1>
+        <a class="btn btn-warning btn-lg text-light" href="test.html">XEM THÊM</a>
+      </div>
+
     </div>
-    <div class="slider-item">
-        <img src="https://picsum.photos/id/522/700/700" alt="" width="100%">
-    </div>
-    <div class="slider-item">
-        <img src="https://picsum.photos/id/523/700/700" alt="" width="100%">
-    </div>
-    <div class="slider-item">
-      <img src="https://picsum.photos/id/524/700/700" alt="" width="100%">
-    </div>
-    <div class="slider-item">
-      <img src="https://picsum.photos/id/525/700/700" alt="" width="100%">
-    </div>
-    <div class="slider-item">
-      <img src="https://picsum.photos/id/526/700/700" alt="" width="100%">
-    </div>
-    <div class="slider-item">
-      <img src="https://picsum.photos/id/527/700/700" alt="" width="100%">
-    </div>
-    <div class="slider-item">
-      <img src="https://picsum.photos/id/528/700/700" alt="" width="100%">
-    </div>
-    <div class="slider-item">
-      <img src="https://picsum.photos/id/529/700/700" alt="" width="100%">
-    </div>
-    <div class="slider-item">
-      <img src="https://picsum.photos/id/530/700/700" alt="" width="100%">
+  
+    <button class="slider__control prev"><i class="fa-solid fa-arrow-left" style="color: #ffffff;"></i></button>
+    <button class="slider__control next"><i class="fa-solid fa-arrow-right" style="color: #ffffff;"></i></button>
+    <div class="slider__container" data-multislide="false" data-step="4">
+        <div class="slider__item">
+            <img class="slider-img" src="images/image-slider-1.jpg" alt="" class="active">
+            <h2>Khu Du Lịch Đại Nam</h2>
+        </div>
+        <div class="slider__item">
+            <img class="slider-img" src="images/image-slider-2.jpg" alt="" >
+            <h2>Sân Golf Phú Mỹ</h2>
+        </div>
+        <div class="slider__item">
+            <img class="slider-img" src="images/image-slider-3.jpg" alt="" >
+            <h2>Nhà Thờ Chánh Toà</h2>
+        </div>
+        <div class="slider__item">
+            <img class="slider-img" src="images/image-slider-4.jpg" alt="" >
+            <h2>Phố Đi Bộ Bạch Đằng</h2>
+        </div>
+        <div class="slider__item">
+            <img class="slider-img" src="images/image-slider-5.jpg" alt="" >
+            <h2>Sân Golf Mekong</h2>
+        </div>
+        <div class="slider__item">
+            <img class="slider-img" src="images/image-slider-6.jpg" alt="" >
+            <h2>Aeon Mall Bình Dương</h2>
+        </div>
+        <div class="slider__item">
+            <img class="slider-img" src="images/image-slider-7.jpg" alt="" >
+            <h2>Khu Du Lịch Thuỷ Châu</h2>
+        </div>
+        </div>
     </div>
   </div>
 </section>
+
+<section class="news-section pb-5">
+  <div class="row">
+    <div class="col-xl-6">
+      <a>
+        <img class="news1-image" src="images/news-1.jpg">
+        <h3 class="mt-2">THÀNH PHỐ THUẬN AN THÔNG QUA KẾ HOẠCH TỔ CHỨC LỄ HỘI "LÁI THIÊU MÙA TRÁI CHÍN"</h3>
+      </a>
+    </div>
+    <div class="col-xl-6">
+      <div class="row mt-5">
+        <div class="col">
+          <h1>TIN TỨC</h1>
+          <a class="btn btn-warning btn-lg text-light" href="test.html">XEM THÊM</a>
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div class="col-4">
+          <img class="news2-image" src="images/news-2.jpg" alt="">
+        </div>
+        <div class="col-8">
+          <h3 class="">Hàng ngàn người xem đua thuyền ở Bình Dương</h3>
+          <a class="btn btn-warning btn-lg text-light" href="test.html">XEM THÊM</a>
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div class="col-4">
+          <img class="news2-image" src="images/news-2.jpg" alt="">
+        </div>
+        <div class="col-8">
+          <h3 class="">Hàng ngàn người xem đua thuyền ở Bình Dương</h3>
+          <a class="btn btn-warning btn-lg text-light" href="test.html">XEM THÊM</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="service-secton py-5">
+  <div class="container">
+    <div class="row text-center image-header mb-5">
+      <h1>DỊCH VỤ HỖ TRỢ DU LỊCH</h1>
+    </div>
+    <div class="row">
+      <div class="col-md-6 px-4 mb-5">
+        <div class="row bg-white">
+          <div class="col-4">
+            <img class="service-image" src="images/service-1.jpeg" alt="">
+          </div>
+          <div class="col-8 text-center py-3">
+            <h4 class="">RESORT - KHÁCH SẠN</h4>
+            <a class="btn btn-warning btn-lg text-light" href="test.html">XEM THÊM</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 px-4 mb-5">
+        <div class="row bg-white">
+          <div class="col-4">
+            <img class="service-image" src="images/service-2.jpg" alt="">
+          </div>
+          <div class="col-8 text-center py-3">
+            <h4 class="">RESORT - KHÁCH SẠN</h4>
+            <a class="btn btn-warning btn-lg text-light" href="test.html">XEM THÊM</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 px-4 mb-5">
+        <div class="row bg-white">
+          <div class="col-4">
+            <img class="service-image" src="images/service-3.jpg" alt="">
+          </div>
+          <div class="col-8 text-center py-3">
+            <h4 class="">QUÁN ĂN - NHÀ HÀNG</h4>
+            <a class="btn btn-warning btn-lg text-light" href="test.html">XEM THÊM</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 px-4 mb-5">
+        <div class="row bg-white">
+          <div class="col-4">
+            <img class="service-image" src="images/service-4.jpg" alt="">
+          </div>
+          <div class="col-8 text-center py-3">
+            <h4 class="">RESORT - KHÁCH SẠN</h4>
+            <a class="btn btn-warning btn-lg text-light" href="test.html">XEM THÊM</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="row py-3">
+      <div class="col-xl-6">
+        <div class="row">
+          <div class="col-4">
+            <img src="./images/brand.png" width="100%" height="100" class="d-inline-block align-top" alt="">
+          </div>
+          <div class="col-8">
+            <h1 class="footer-head-text">TRUNG TÂM DU LỊCH TỈNH BÌNH DƯƠNG</h1>
+          </div>
+        </div>
+        <div class="row mt-5">
+          <div class="col footer-text">
+            <p>Địa chỉ: 350 Nguyễn Chí Thanh, Khu 3, Phường Hiệp An, Thủ Dầu Một, Bình Dương</p>
+            <p>Điện thoại: <a href=”tel:113″>0942 424 424</a></p>
+            <p>Email: trungtamdulichbinhduong@email.com</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-6 text-center p-4">
+        <iframe class="gmap-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d250665.36656319685!2d106.35887859453125!3d10.990043600000007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3174d117800fe90f%3A0xe66d67d4e06ab329!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBCw6xuaCBExrDGoW5n!5e0!3m2!1svi!2s!4v1689528907099!5m2!1svi!2s"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</footer>
 
 </body>
 </html>
