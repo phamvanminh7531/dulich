@@ -174,7 +174,7 @@
 
 .gmap-iframe{
   width: 80%;
-  height: 450px;
+  height: 400px;
 }
 
 .footer-head-text{
@@ -184,4 +184,8 @@
 .footer-text{
   color: #fff;
   font-size: 1vw;
+}
+
+p {
+  font-size: clamp(19px, 1.6vw, 25px);
 }
