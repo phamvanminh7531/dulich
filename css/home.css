@@ -5,13 +5,7 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 } */
-.nav{
-    background-color: #ffffff;
-}
 
-.nav-item{
-    margin-left: 2em;
-}
 
 .img-gallery{
   height: 800px !important;
@@ -168,24 +162,3 @@
   background-color: rgb(238, 238, 238);
 }
 
-.footer{
-  background-color: rgb(49, 56, 66);
-}
-
-.gmap-iframe{
-  width: 80%;
-  height: 400px;
-}
-
-.footer-head-text{
-  color: #ffdd01;
-}
-
-.footer-text{
-  color: #fff;
-  font-size: 1vw;
-}
-
-p {
-  font-size: clamp(19px, 1.6vw, 25px);
-}
