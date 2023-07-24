@@ -10,26 +10,26 @@
     <link rel="stylesheet" type="text/css" href="./css/styles.css">
     <script src="./js/dragble-images.js"></script>
     <script src="https://kit.fontawesome.com/065d57b73d.js" crossorigin="anonymous"></script>
-	<link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Lato+Sans+Narrow|Source+Sans+Pro:200,300,400,600,700,900&amp;subset=all" rel="stylesheet" type="text/css">
-	<link href="//bizweb.dktcdn.net/100/354/107/themes/720093/assets/bootstrap.scss.css?1668157387088" rel="stylesheet" type="text/css" media="all">
-	<link href="//bizweb.dktcdn.net/100/354/107/themes/720093/assets/style.scss.css?1668157387088" rel="stylesheet" type="text/css" media="all">
-	<link href="//bizweb.dktcdn.net/100/354/107/themes/720093/assets/style2.scss.css?1668157387088" rel="stylesheet" type="text/css" media="all">
-	<link href="//bizweb.dktcdn.net/100/354/107/themes/720093/assets/font-icons.css?1668157387088" rel="stylesheet" type="text/css" media="all">
-	<link href="//bizweb.dktcdn.net/100/354/107/themes/720093/assets/custom_style.scss.css?1668157387088" rel="stylesheet" type="text/css" media="all">
-	<style>
-		@media (max-width: 767px) {
-			.sort_title {
-				text-align: left!important;
-				padding-left: 5px!important;
-			}
-			.page_title {
-				padding-left: 5px!important;
-			}
-			.sort-wrapper .browse-tags .col-xs-7 {
-				padding-right: 5px!important;
-			}
-		}
-	</style>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Lato+Sans+Narrow|Source+Sans+Pro:200,300,400,600,700,900&amp;subset=all" rel="stylesheet" type="text/css">
+    <link href="//bizweb.dktcdn.net/100/354/107/themes/720093/assets/bootstrap.scss.css?1668157387088" rel="stylesheet" type="text/css" media="all">
+    <link href="//bizweb.dktcdn.net/100/354/107/themes/720093/assets/style.scss.css?1668157387088" rel="stylesheet" type="text/css" media="all">
+    <link href="//bizweb.dktcdn.net/100/354/107/themes/720093/assets/style2.scss.css?1668157387088" rel="stylesheet" type="text/css" media="all">
+    <link href="//bizweb.dktcdn.net/100/354/107/themes/720093/assets/font-icons.css?1668157387088" rel="stylesheet" type="text/css" media="all">
+    <link href="//bizweb.dktcdn.net/100/354/107/themes/720093/assets/custom_style.scss.css?1668157387088" rel="stylesheet" type="text/css" media="all">
+    <style>
+      @media (max-width: 767px) {
+        .sort_title {
+          text-align: left!important;
+          padding-left: 5px!important;
+        }
+        .page_title {
+          padding-left: 5px!important;
+        }
+        .sort-wrapper .browse-tags .col-xs-7 {
+          padding-right: 5px!important;
+        }
+      }
+    </style>
 </head>
 <body>
   <nav class="navbar navbar-expand-lg nav fixed-top">
@@ -59,9 +59,9 @@
             </li>
 
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Dịch Vụ</a>
+                <a class="nav-link dropdown-toggle" href="hotel.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">Dịch Vụ</a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Khách sạn</a></li>
                   <li><a class="dropdown-item" href="#">Another action</a></li>
                   <li><a class="dropdown-item" href="#">Something else here</a></li>
                 </ul>
@@ -77,18 +77,13 @@
     </div>
   </nav>
   <section id="page-title">
-	<div class="container clearfix">
-		<ol class="breadcrumb col-xs-12">
-			<li><a href="/"><i class="icon-home2"></i>Trang chủ</a></li>
-			
-			
-			<li class="active">Khách sạn</li>
-			
-			
-		</ol>
-	</div>
+    <div class="container clearfix">
+      <ol class="breadcrumb col-xs-12">
+        <li><a href="/"><i class="icon-home2"></i>Trang chủ</a></li>   
+        <li class="active">Khách sạn</li>
+      </ol>
+    </div>
   </section>
-
   <section id="content">
 	<div class="content-wrap">
 		<div class="container clearfix">
@@ -97,10 +92,14 @@
 				<label for="location-filter">Nơi Bạn Muốn Đến</label>
 				<select id="location-filter">
 					<option value="">Tất cả</option>
-					<option value="Bình Dương">Bình Dương</option>
-					<option value="Đà Lạt">Đà Lạt</option>
-					<option value="Hà Nội">Hà Nội</option>
-				<!-- Thêm các khu vực du lịch khác vào đây -->
+					<option value="Đại Nam">Đại Nam</option>
+					<option value="Thủy Châu">Sinh thái Thủy Châu</option>
+					<option value="Phú Cường">Nhà thờ Phú Cường</option>
+					<option value="Dầu Tiếng">Hồ Dầu Tiếng</option>
+					<option value="Thành Phố mới">Công viên Thành Phố mới</option>
+					<option value="Hội Khánh">Chùa Hội Khánh</option>
+					<option value="Châu Thới">Chùa Châu Thới</option>
+					<option value="Tây Tạng">Chùa Tây Tạng</option>
 				</select>
 			</div>
   
@@ -109,19 +108,19 @@
 					<!-- Products -->
 					<div id="grid_pagination" class="row shop">
 						<!-- Product 1 -->
-						<div class="col-sm-4 col-lg-3 col-xs-6 product_single" data-location="Bình Dương">
+						<div class="col-sm-4 col-lg-3 col-xs-6 product_single" data-location="Đại Nam">
 							<div class="product clearfix">
 								<div class="product-image">
-									<a href="/khach-san-intercontinental-classic-huong-bien-toan-canh-1-giuong-doi-classic-panoramic-oceanview-king">
+									<a href="hotel_detail.html?id=1">
 										<picture>
 											<source media="(max-width: 767px) and (min-width: 480px)" srcset="images/z4234041548379-f8f21fa146ac0d3bda2d5a2ffffa8bad_1.jpg">
-											<img src="images/z4234041548379-f8f21fa146ac0d3bda2d5a2ffffa8bad.jpg" alt="KHÁCH SẠN INTERCONTINENTAL (Classic Hướng Biển Toàn Cảnh 1 giường đôi (Classic Panoramic Oceanview King)">
+											<img src="" alt="KHÁCH SẠN INTERCONTINENTAL (Classic Hướng Biển Toàn Cảnh 1 giường đôi (Classic Panoramic Oceanview King)">
 										</picture>
 									</a>
 								</div>
 								<div class="product-desc">
 									<div class="product-title text-left">
-										<h3 title="KHÁCH SẠN INTERCONTINENTAL (Classic Hướng Biển Toàn Cảnh 1 giường đôi (Classic Panoramic Oceanview King)"><a href="/khach-san-intercontinental-classic-huong-bien-toan-canh-1-giuong-doi-classic-panoramic-oceanview-king">KHÁCH SẠN INTERCONTINENTAL (Classic Hướng Biển Toàn Cảnh 1 giường đôi (Classic Panoramic Oceanview King)</a></h3>
+										<h3 title="KHÁCH SẠN INTERCONTINENTAL (Classic Hướng Biển Toàn Cảnh 1 giường đôi (Classic Panoramic Oceanview King)"><a href="hotel_detail.html?id=1">KHÁCH SẠN INTERCONTINENTAL (Classic Hướng Biển Toàn Cảnh 1 giường đôi (Classic Panoramic Oceanview King)</a></h3>
 									</div>
 									<div class="product-price">
 										<ins> 12.410.000₫ </ins>
@@ -139,10 +138,10 @@
 							</div>
 						</div>
 						<!-- Product 2 -->
-						<div class="col-sm-4 col-lg-3 col-xs-6 product_single" data-location="Đà Lạt">
+						<div class="col-sm-4 col-lg-3 col-xs-6 product_single" data-location="Thủy Châu">
 							<div class="product clearfix">
 								<div class="product-image">
-									<a href="/khach-san-marriot-deluxe">
+									<a href="hotel_detail.html?id=2">
 										<picture>
 											<source media="(max-width: 767px) and (min-width: 480px)" srcset="images/z4233955368212-d3852d17165aedd456f81de11d2d2690_1.jpg">
 											<img src="images/z4233955368212-d3852d17165aedd456f81de11d2d2690.jpg" alt="KHÁCH SẠN MARRIOT- DELUXE">
@@ -152,7 +151,7 @@
 								</div>
 								<div class="product-desc">
 									<div class="product-title text-left">
-										<h3 title="KHÁCH SẠN MARRIOT- DELUXE"><a href="/khach-san-marriot-deluxe">KHÁCH SẠN MARRIOT- DELUXE</a></h3>
+										<h3 title="KHÁCH SẠN MARRIOT- DELUXE"><a href="hotel_detail.html?id=2">KHÁCH SẠN MARRIOT- DELUXE</a></h3>
 									</div>
 									<div class="product-price">
 										<ins> 6.100.000₫ </ins>
@@ -171,10 +170,10 @@
 							</div>
 						</div>
 						<!-- Product 3 -->
-						<div class="col-sm-4 col-lg-3 col-xs-6 product_single">
+						<div class="col-sm-4 col-lg-3 col-xs-6 product_single" data-location="Phú Cường">
 							<div class="product clearfix">
 								<div class="product-image">
-									<a href="/colline-hotel">
+									<a href="hotel_detail.html?id=3">
 										<picture>
 											<source media="(max-width: 767px) and (min-width: 480px)" srcset="images/z4233931862777-aab5c92df41570b05d3422df618bdbed_1.jpg">
 											<img src="images/z4233931862777-aab5c92df41570b05d3422df618bdbed.jpg" alt="COLLINE HOTEL- SUPERIOR GIƯỜNG ĐÔI">
@@ -183,7 +182,7 @@
 								</div>
 								<div class="product-desc">
 									<div class="product-title text-left">
-										<h3 title="COLLINE HOTEL- SUPERIOR GIƯỜNG ĐÔI"><a href="/colline-hotel">COLLINE HOTEL- SUPERIOR GIƯỜNG ĐÔI</a></h3>
+										<h3 title="COLLINE HOTEL- SUPERIOR GIƯỜNG ĐÔI"><a href="hotel_detail.html?id=3">COLLINE HOTEL- SUPERIOR GIƯỜNG ĐÔI</a></h3>
 									</div>
 									<div class="product-price">
 										<ins> 1.850.000₫ </ins>
@@ -201,10 +200,10 @@
 							</div>
 						</div>
 						<!-- Product 4 -->
-						<div class="col-sm-4 col-lg-3 col-xs-6 product_single">
+						<div class="col-sm-4 col-lg-3 col-xs-6 product_single" data-location="Dầu Tiếng">
 							<div class="product clearfix">
 								<div class="product-image">
-									<a href="/fotuna-ha-noi">
+									<a href="hotel_detail.html?id=4">
 										<picture>
 											<source media="(max-width: 767px) and (min-width: 480px)" srcset="images/z4233907624943-807a6a84e24063196f8dfaee31c94d0a_1.jpg">
 											<img src="images/z4233907624943-807a6a84e24063196f8dfaee31c94d0a.jpg" alt="FOTUNA HÀ NỘI- DELUXE">
@@ -214,7 +213,7 @@
 								</div>
 								<div class="product-desc">
 									<div class="product-title text-left">
-										<h3 title="FOTUNA HÀ NỘI- DELUXE"><a href="/fotuna-ha-noi">FOTUNA HÀ NỘI- DELUXE</a></h3>
+										<h3 title="FOTUNA HÀ NỘI- DELUXE"><a href="hotel_detail.html?id=4">FOTUNA HÀ NỘI- DELUXE</a></h3>
 									</div>
 									<div class="product-price">
 										<ins> 1.870.000₫ </ins>
@@ -233,10 +232,10 @@
 							</div>
 						</div>
 						<!-- Product 5 -->
-						<div class="col-sm-4 col-lg-3 col-xs-6 product_single">
+						<div class="col-sm-4 col-lg-3 col-xs-6 product_single" data-location="Thành Phố mới">
 							<div class="product clearfix">
 								<div class="product-image">
-									<a href="/bingsapa-hotel">
+									<a href="hotel_detail.html?id=5">
 										<picture>
 											<source media="(max-width: 767px) and (min-width: 480px)" srcset="images/s_1.jpg">
 											<img src="images/s.jpg" alt="Bingsapa Hotel - Superior">
@@ -246,7 +245,7 @@
 								</div>
 								<div class="product-desc">
 									<div class="product-title text-left">
-										<h3 title="Bingsapa Hotel - Superior"><a href="/bingsapa-hotel">Bingsapa Hotel - Superior</a></h3>
+										<h3 title="Bingsapa Hotel - Superior"><a href="hotel_detail.html?id=5">Bingsapa Hotel - Superior</a></h3>
 									</div>
 									<div class="product-price">
 										<ins> 700.000₫ </ins>
@@ -265,10 +264,10 @@
 							</div>
 						</div>
 						<!-- Product 6 -->
-						<div class="col-sm-4 col-lg-3 col-xs-6 product_single">
+						<div class="col-sm-4 col-lg-3 col-xs-6 product_single" data-location="Hội Khánh">
 							<div class="product clearfix">
 								<div class="product-image">
-									<a href="/mira-hotel">
+									<a href="hotel_detail.html?id=6">
 										<picture>
 											<source media="(max-width: 767px) and (min-width: 480px)" srcset="images/the-mira-hotel-2_1.jpg">
 											<img src="images/the-mira-hotel-2.jpg" alt="MIRA HOTEL">
@@ -278,7 +277,7 @@
 								</div>
 								<div class="product-desc">
 									<div class="product-title text-left">
-										<h3 title="MIRA HOTEL"><a href="/mira-hotel">MIRA HOTEL</a></h3>
+										<h3 title="MIRA HOTEL"><a href="hotel_detail.html?id=6">MIRA HOTEL</a></h3>
 									</div>
 									<div class="product-price">
 										<ins> 550.000₫ </ins>
@@ -297,10 +296,10 @@
 							</div>
 						</div>
 						<!-- Product 7 -->
-						<div class="col-sm-4 col-lg-3 col-xs-6 product_single">
+						<div class="col-sm-4 col-lg-3 col-xs-6 product_single" data-location="Châu Thới">
 							<div class="product clearfix">
 								<div class="product-image">
-									<a href="/khach-san-mira-bai-xep">
+									<a href="hotel_detail.html?id=7">
 										<picture>
 											<source media="(max-width: 767px) and (min-width: 480px)" srcset="images/mira_1.jpg">
 											<img src="images/mira.jpg" alt="KHÁCH SẠN MIRA BÃI XẾP-DELUXE DBL">
@@ -310,7 +309,7 @@
 								</div>
 								<div class="product-desc">
 									<div class="product-title text-left">
-										<h3 title="KHÁCH SẠN MIRA BÃI XẾP-DELUXE DBL"><a href="/khach-san-mira-bai-xep">KHÁCH SẠN MIRA BÃI XẾP-DELUXE DBL</a></h3>
+										<h3 title="KHÁCH SẠN MIRA BÃI XẾP-DELUXE DBL"><a href="hotel_detail.html?id=7">KHÁCH SẠN MIRA BÃI XẾP-DELUXE DBL</a></h3>
 									</div>
 									<div class="product-price">
 										<ins> 1.400.000₫ </ins>
@@ -329,10 +328,10 @@
 							</div>
 						</div>
 						<!-- Product 8 -->
-						<div class="col-sm-4 col-lg-3 col-xs-6 product_single">
+						<div class="col-sm-4 col-lg-3 col-xs-6 product_single" data-location="Tây Tạng">
 							<div class="product clearfix">
 								<div class="product-image">
-									<a href="/marigold-hotel-dalat">
+									<a href="hotel_detail.html?id=8">
 										<picture>
 											<source media="(max-width: 767px) and (min-width: 480px)" srcset="images/mari_1.jpg">
 											<img src="images/mari.jpg" alt="MARIGOLD HOTEL DALAT - SUPERIOR">
@@ -342,7 +341,7 @@
 								</div>
 								<div class="product-desc">
 									<div class="product-title text-left">
-										<h3 title="MARIGOLD HOTEL DALAT - SUPERIOR"><a href="/marigold-hotel-dalat">MARIGOLD HOTEL DALAT - SUPERIOR</a></h3>
+										<h3 title="MARIGOLD HOTEL DALAT - SUPERIOR"><a href="hotel_detail.html?id=8">MARIGOLD HOTEL DALAT - SUPERIOR</a></h3>
 									</div>
 									<div class="product-price">
 										<ins> 900.000₫ </ins>
@@ -403,16 +402,41 @@
         for (var i = 0; i < products.length; i++) {
           products[i].classList.add('hidden');
         }
-        if (selectedLocation === 'Bình Dương') {
-          var binhDuongProducts = document.querySelectorAll('.product_single[data-location="Bình Dương"]');
+        if (selectedLocation === 'Đại Nam') {
+          var binhDuongProducts = document.querySelectorAll('.product_single[data-location="Đại Nam"]');
           for (var j = 0; j < binhDuongProducts.length; j++) {
             binhDuongProducts[j].classList.remove('hidden');
           }
-        } else if (selectedLocation === 'Đà Lạt') {
-          var daLatProducts = document.querySelectorAll('.product_single[data-location="Đà Lạt"]');
+        } else if (selectedLocation === 'Thủy Châu') {
+          var daLatProducts = document.querySelectorAll('.product_single[data-location="Thủy Châu"]');
           for (var k = 0; k < daLatProducts.length; k++) {
             daLatProducts[k].classList.remove('hidden');
-          }  
+          } 
+		} else if (selectedLocation === 'Phú Cường') {
+          var daLatProducts = document.querySelectorAll('.product_single[data-location="Phú Cường"]');
+          for (var k = 0; k < daLatProducts.length; k++) {
+            daLatProducts[k].classList.remove('hidden');
+          } 
+		} else if (selectedLocation === 'Dầu Tiếng') {
+          var daLatProducts = document.querySelectorAll('.product_single[data-location="Dầu Tiếng"]');
+          for (var k = 0; k < daLatProducts.length; k++) {
+            daLatProducts[k].classList.remove('hidden');
+          } 
+		} else if (selectedLocation === 'Thành Phố mới') {
+          var daLatProducts = document.querySelectorAll('.product_single[data-location="Thành Phố mới"]');
+          for (var k = 0; k < daLatProducts.length; k++) {
+            daLatProducts[k].classList.remove('hidden');
+          } 
+		} else if (selectedLocation === 'Hội Khánh') {
+          var daLatProducts = document.querySelectorAll('.product_single[data-location="Hội Khánh"]');
+          for (var k = 0; k < daLatProducts.length; k++) {
+            daLatProducts[k].classList.remove('hidden');
+          }
+		} else if (selectedLocation === 'Tây Tạng') {
+          var daLatProducts = document.querySelectorAll('.product_single[data-location="Tây Tạng"]');
+          for (var k = 0; k < daLatProducts.length; k++) {
+            daLatProducts[k].classList.remove('hidden');
+          }
         } else {
           for (var k = 0; k < products.length; k++) {
             products[k].classList.remove('hidden');
