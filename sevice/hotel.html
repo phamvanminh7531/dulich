@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+    <script src="/js/dragble-images.js"></script>
+    <script src="https://kit.fontawesome.com/065d57b73d.js" crossorigin="anonymous"></script>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Lato+Sans+Narrow|Source+Sans+Pro:200,300,400,600,700,900&amp;subset=all" rel="stylesheet" type="text/css">
+    <link href="//bizweb.dktcdn.net/100/354/107/themes/720093/assets/bootstrap.scss.css?1668157387088" rel="stylesheet" type="text/css" media="all">
+    <link href="//bizweb.dktcdn.net/100/354/107/themes/720093/assets/style.scss.css?1668157387088" rel="stylesheet" type="text/css" media="all">
+    <link href="//bizweb.dktcdn.net/100/354/107/themes/720093/assets/style2.scss.css?1668157387088" rel="stylesheet" type="text/css" media="all">
+    <link href="//bizweb.dktcdn.net/100/354/107/themes/720093/assets/font-icons.css?1668157387088" rel="stylesheet" type="text/css" media="all">
+    <link href="//bizweb.dktcdn.net/100/354/107/themes/720093/assets/custom_style.scss.css?1668157387088" rel="stylesheet" type="text/css" media="all">
+    <style>
+		.w-100{
+			height: 900px;
+		}
+
+      @media (max-width: 767px) {
+        .sort_title {
+          text-align: left!important;
+          padding-left: 5px!important;
+        }
+        .page_title {
+          padding-left: 5px!important;
+        }
+        .sort-wrapper .browse-tags .col-xs-7 {
+          padding-right: 5px!important;
+        }
+      }
+    </style>
+</head>
+<body>
+	
+  <nav class="navbar navbar-expand-lg nav fixed-top">
+    <div class="container">
+        <a class="navbar-brand pl-5" href="#">
+            <img src="/images/brand.png" width="100%" height="50" class="d-inline-block align-top" alt="">
+        </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 nav-ul">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">Trang Chủ</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="location.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">Danh Sách Điểm Đến</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">Dịch Vụ</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="hotel.html">Khách sạn</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">Tin Tức</a>
+              </li>
+            
+            </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="container-fluid p-0 mb-5">
+		<div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<img class="w-100" src="/images/banner-hotel.png" alt="Image">
+					<div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+						<div class="p-3" style="max-width: 700px;">
+							<h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">Du Lịch Bình Dương</h6>
+							<h1 class="display-3 text-white mb-4 animated slideInDown">Khách Sạn Tiêu Biểu</h1>
+							<a href="" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Đặt phòng</a>
+							<a href="" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Gọi Phòng</a>
+						</div>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<img class="w-100" src="/images/banner-hotel2.jpg" alt="Image">
+					<div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+						<div class="p-3" style="max-width: 700px;">
+							<h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">Du Lịch Bình Dương</h6>
+							<h1 class="display-3 text-white mb-4 animated slideInDown">Khách Sạn Tiêu Biểu</h1>
+							<a href="" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Đặt phòng</a>
+							<a href="" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Gọi Phòng</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<button class="carousel-control-prev" type="button" data-bs-target="#header-carousel"
+				data-bs-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Previous</span>
+			</button>
+			<button class="carousel-control-next" type="button" data-bs-target="#header-carousel"
+				data-bs-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Next</span>
+			</button>
+		</div>
+	</div>
+  <section id="page-title">
+    <div class="container clearfix">
+      <ol class="breadcrumb col-xs-12">
+        <li><a href="/"><i class="icon-home2"></i>Trang chủ</a></li>   
+        <li class="active">Khách sạn</li>
+      </ol>
+    </div>
+  </section>
+  <section id="content">
+	<div class="content-wrap">
+		<div class="container clearfix">
+			<!-- Ô text lọc -->
+			<div class="filter">
+				<label for="location-filter">Nơi Bạn Muốn Đến</label>
+				<select id="location-filter">
+					<option value="">Tất cả</option>
+					<option value="Đại Nam">Đại Nam</option>
+					<option value="Thủy Châu">Sinh thái Thủy Châu</option>
+					<option value="Phú Cường">Nhà thờ Phú Cường</option>
+					<option value="Dầu Tiếng">Hồ Dầu Tiếng</option>
+					<option value="Thành Phố mới">Công viên Thành Phố mới</option>
+					<option value="Hội Khánh">Chùa Hội Khánh</option>
+					<option value="Châu Thới">Chùa Châu Thới</option>
+					<option value="Tây Tạng">Chùa Tây Tạng</option>
+				</select>
+			</div>
+  
+			<div class="col-md-9 nobottommargin col-md-push-3 col-xs-12">
+				<div id="shop" class="product-3 shop clearfix">		
+					<!-- Products -->
+					<div id="grid_pagination" class="row shop">
+						<!-- Product 1 -->
+						<div class="col-sm-4 col-lg-3 col-xs-6 product_single" data-location="Đại Nam">
+							<div class="product clearfix">
+								<div class="product-image">
+									<a href="hotel_detail.html?id=1">
+										<picture>
+											<img src="/images/dainamhotel.jpg" alt="KHÁCH SẠN ĐẠI NAM">
+										</picture>
+									</a>
+								</div>
+								<div class="product-desc">
+									<div class="product-title text-left">
+										<h3 title="KHÁCH SẠN ĐẠI NAM"><a href="hotel_detail.html?id=1">KHÁCH SẠN ĐẠI NAM</a></h3>
+									</div>
+									<div class="product-price">
+										<ins> 2.410.000₫ </ins>
+									</div>
+									<div class="product_detail">
+										<!-- Product details -->
+									</div>
+								</div>
+								<div class="quick_book text-center">
+									<a href="hotel_detail.html?id=1" class="button">ĐẶT NGAY <i class="icon-angle-right"></i></a>
+								</div>
+							</div>
+						</div>
+						<!-- Product 2 -->
+						<div class="col-sm-4 col-lg-3 col-xs-6 product_single" data-location="Thủy Châu">
+							<div class="product clearfix">
+								<div class="product-image">
+									<a href="hotel_detail.html?id=2">
+										<picture>
+											<img src="/images/mirahotel.jpg" alt="KHÁCH SẠN MIRA">
+										</picture>
+									</a>
+									<div class="sale-flash">SALE</div>
+								</div>
+								<div class="product-desc">
+									<div class="product-title text-left">
+										<h3 title="KHÁCH SẠN MIRA"><a href="hotel_detail.html?id=2">KHÁCH SẠN MIRA</a></h3>
+									</div>
+									<div class="product-price">
+										<ins> 1.100.000₫ </ins>
+										<del>1.800.000₫</del>
+									</div>
+									<div class="product_detail">
+										<!-- Product details -->
+									</div>
+								</div>
+								<div class="quick_book text-center">
+									<a href="hotel_detail.html?id=2" class="button">ĐẶT NGAY <i class="icon-angle-right"></i></a>
+								</div>
+							</div>
+						</div>
+						<!-- Product 3 -->
+						<div class="col-sm-4 col-lg-3 col-xs-6 product_single" data-location="Phú Cường">
+							<div class="product clearfix">
+								<div class="product-image">
+									<a href="hotel_detail.html?id=3">
+										<picture>
+											<img src="/images/becamexhotel.jpg" alt="KHÁCH SẠN BECAMEX">
+										</picture>
+									</a>
+								</div>
+								<div class="product-desc">
+									<div class="product-title text-left">
+										<h3 title="KHÁCH SẠN BECAMEX"><a href="hotel_detail.html?id=3">KHÁCH SẠN BECAMEX</a></h3>
+									</div>
+									<div class="product-price">
+										<ins> 850.000₫ </ins>
+									</div>
+									<div class="product_detail">
+										<!-- Product details -->
+									</div>
+								</div>
+								<div class="quick_book text-center">
+									<a href="hotel_detail.html?id=3" class="button">ĐẶT NGAY <i class="icon-angle-right"></i></a>
+								</div>
+							</div>
+						</div>
+						<!-- Product 4 -->
+						<div class="col-sm-4 col-lg-3 col-xs-6 product_single" data-location="Dầu Tiếng">
+							<div class="product clearfix">
+								<div class="product-image">
+									<a href="hotel_detail.html?id=4">
+										<picture>
+											<img src="/images/bconhotel.jpg" alt="KHÁCH SẠN BCON">
+										</picture>
+									</a>
+									<div class="sale-flash">SALE</div>
+								</div>
+								<div class="product-desc">
+									<div class="product-title text-left">
+										<h3 title="KHÁCH SẠN BCON"><a href="hotel_detail.html?id=4">KHÁCH SẠN BCON</a></h3>
+									</div>
+									<div class="product-price">
+										<ins> 1.870.000₫ </ins>
+										<del>1.980.000₫</del>
+									</div>
+									<div class="product_detail">
+										<!-- Product details -->
+									</div>
+								</div>
+								<div class="quick_book text-center">
+									<a href="hotel_detail.html?id=4" class="button">ĐẶT NGAY <i class="icon-angle-right"></i></a>
+								</div>
+							</div>
+						</div>
+						<!-- Product 5 -->
+						<div class="col-sm-4 col-lg-3 col-xs-6 product_single" data-location="Thành Phố mới">
+							<div class="product clearfix">
+								<div class="product-image">
+									<a href="hotel_detail.html?id=5">
+										<picture>
+											<img src="/images/diamondhotel.jpg" alt="KHÁCH SẠN DIAMOND">
+										</picture>
+									</a>
+									<div class="sale-flash">SALE</div>
+								</div>
+								<div class="product-desc">
+									<div class="product-title text-left">
+										<h3 title="KHÁCH SẠN DIAMOND"><a href="hotel_detail.html?id=5">KHÁCH SẠN DIAMOND</a></h3>
+									</div>
+									<div class="product-price">
+										<ins> 700.000₫ </ins>
+										<del>1.000.000₫</del>
+									</div>
+									<div class="product_detail">
+										<!-- Product details -->
+									</div>
+								</div>
+								<div class="quick_book text-center">
+									<a href="hotel_detail.html?id=5" class="button">ĐẶT NGAY <i class="icon-angle-right"></i></a>
+								</div>
+							</div>
+						</div>
+						<!-- Product 6 -->
+						<div class="col-sm-4 col-lg-3 col-xs-6 product_single" data-location="Hội Khánh">
+							<div class="product clearfix">
+								<div class="product-image">
+									<a href="hotel_detail.html?id=6">
+										<picture>
+											<img src="/images/nuhoanghotel.jpg" alt="KHÁCH SẠN NỮ HOÀNG">
+										</picture>
+									</a>
+									<div class="sale-flash">SALE</div>
+								</div>
+								<div class="product-desc">
+									<div class="product-title text-left">
+										<h3 title="KHÁCH SẠN NỮ HOÀNG"><a href="hotel_detail.html?id=6">KHÁCH SẠN NỮ HOÀNG</a></h3>
+									</div>
+									<div class="product-price">
+										<ins> 550.000₫ </ins>
+										<del>750.000₫</del>
+									</div>
+									<div class="product_detail">
+										<!-- Product details -->
+									</div>
+								</div>
+								<div class="quick_book text-center">
+									<a href="hotel_detail.html?id=6" class="button">ĐẶT NGAY <i class="icon-angle-right"></i></a>
+								</div>
+							</div>
+						</div>
+						<!-- Product 7 -->
+						<div class="col-sm-4 col-lg-3 col-xs-6 product_single" data-location="Châu Thới">
+							<div class="product clearfix">
+								<div class="product-image">
+									<a href="hotel_detail.html?id=7">
+										<picture>
+											<img src="/images/thienhahotel.jpg" alt="KHÁCH SẠN THIÊN HÀ">
+										</picture>
+									</a>
+									<div class="sale-flash">SALE</div>
+								</div>
+								<div class="product-desc">
+									<div class="product-title text-left">
+										<h3 title="KHÁCH SẠN THIÊN HÀ"><a href="hotel_detail.html?id=7">KHÁCH SẠN THIÊN HÀ</a></h3>
+									</div>
+									<div class="product-price">
+										<ins> 1.400.000₫ </ins>
+										<del>1.800.000₫</del>
+									</div>
+									<div class="product_detail">
+										<!-- Product details -->
+									</div>
+								</div>
+								<div class="quick_book text-center">
+									<a href="hotel_detail.html?id=7" class="button">ĐẶT NGAY <i class="icon-angle-right"></i></a>
+								</div>
+							</div>
+						</div>
+						<!-- Product 8 -->
+						<div class="col-sm-4 col-lg-3 col-xs-6 product_single" data-location="Tây Tạng">
+							<div class="product clearfix">
+								<div class="product-image">
+									<a href="hotel_detail.html?id=8">
+										<picture>
+											<img src="/images/kmyhotel.jpg" alt="KHÁCH SẠN KMY">
+										</picture>
+									</a>
+									<div class="sale-flash">SALE</div>
+								</div>
+								<div class="product-desc">
+									<div class="product-title text-left">
+										<h3 title="KHÁCH SẠN KMY"><a href="hotel_detail.html?id=8">KHÁCH SẠN KMY</a></h3>
+									</div>
+									<div class="product-price">
+										<ins> 900.000₫ </ins>
+										<del>990.000₫</del>
+									</div>
+									<div class="product_detail">
+										<!-- Product details -->
+									</div>
+								</div>
+								<div class="quick_book text-center">
+									<a href="hotel_detail.html?id=8" class="button">ĐẶT NGAY <i class="icon-angle-right"></i></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+  </section>
+  <footer class="footer">
+  <div class="container">
+    <div class="row py-3">
+      <div class="col-xl-6">
+        <div class="row">
+          <div class="col-4">
+            <img src="/images/brand.png" width="100%" height="100" class="d-inline-block align-top" alt="">
+          </div>
+          <div class="col-8">
+            <h1 class="footer-head-text">TRUNG TÂM DU LỊCH TỈNH BÌNH DƯƠNG</h1>
+          </div>
+        </div>
+        <div class="row mt-5">
+          <div class="col footer-text">
+            <p>Địa chỉ: 350 Nguyễn Chí Thanh, Khu 3, Phường Hiệp An, Thủ Dầu Một, Bình Dương</p>
+            <p>Điện thoại: <a href=”tel:113″>0942 424 424</a></p>
+            <p>Email: trungtamdulichbinhduong@email.com</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-6 text-center p-4">
+        <iframe class="gmap-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d250665.36656319685!2d106.35887859453125!3d10.990043600000007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3174d117800fe90f%3A0xe66d67d4e06ab329!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBCw6xuaCBExrDGoW5n!5e0!3m2!1svi!2s!4v1689528907099!5m2!1svi!2s"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+  </footer>
+</body>
+
+	<script>
+		document.addEventListener('DOMContentLoaded', function() {
+      var locationFilter = document.getElementById('location-filter');
+      locationFilter.addEventListener('change', function() {
+        var selectedLocation = locationFilter.value; 
+        var products = document.getElementsByClassName('product_single');
+        for (var i = 0; i < products.length; i++) {
+          products[i].classList.add('hidden');
+        }
+        if (selectedLocation === 'Đại Nam') {
+          var binhDuongProducts = document.querySelectorAll('.product_single[data-location="Đại Nam"]');
+          for (var j = 0; j < binhDuongProducts.length; j++) {
+            binhDuongProducts[j].classList.remove('hidden');
+          }
+        } else if (selectedLocation === 'Thủy Châu') {
+          var daLatProducts = document.querySelectorAll('.product_single[data-location="Thủy Châu"]');
+          for (var k = 0; k < daLatProducts.length; k++) {
+            daLatProducts[k].classList.remove('hidden');
+          } 
+		} else if (selectedLocation === 'Phú Cường') {
+          var daLatProducts = document.querySelectorAll('.product_single[data-location="Phú Cường"]');
+          for (var k = 0; k < daLatProducts.length; k++) {
+            daLatProducts[k].classList.remove('hidden');
+          } 
+		} else if (selectedLocation === 'Dầu Tiếng') {
+          var daLatProducts = document.querySelectorAll('.product_single[data-location="Dầu Tiếng"]');
+          for (var k = 0; k < daLatProducts.length; k++) {
+            daLatProducts[k].classList.remove('hidden');
+          } 
+		} else if (selectedLocation === 'Thành Phố mới') {
+          var daLatProducts = document.querySelectorAll('.product_single[data-location="Thành Phố mới"]');
+          for (var k = 0; k < daLatProducts.length; k++) {
+            daLatProducts[k].classList.remove('hidden');
+          } 
+		} else if (selectedLocation === 'Hội Khánh') {
+          var daLatProducts = document.querySelectorAll('.product_single[data-location="Hội Khánh"]');
+          for (var k = 0; k < daLatProducts.length; k++) {
+            daLatProducts[k].classList.remove('hidden');
+          }
+		} else if (selectedLocation === 'Tây Tạng') {
+          var daLatProducts = document.querySelectorAll('.product_single[data-location="Tây Tạng"]');
+          for (var k = 0; k < daLatProducts.length; k++) {
+            daLatProducts[k].classList.remove('hidden');
+          }
+        } else {
+          for (var k = 0; k < products.length; k++) {
+            products[k].classList.remove('hidden');
+          }
+        }
+      });
+		});
+	</script>
+	<style>
+		.hidden {
+		display: none;
+		}
+	</style>
+</html>
