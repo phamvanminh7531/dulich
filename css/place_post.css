@@ -26,6 +26,11 @@
     height: 80%;
     margin: auto;
 }
+
+.related-image:hover{
+    opacity: 0.8;
+}
+
 .related-title{
     margin-top: 5px;
     font-size: clamp(15px, 1.5vw, 25px);
@@ -37,4 +42,14 @@
 
 .place-post-related-section{
     margin-bottom: 35px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover{
+    text-decoration: underline;
+    
 }
