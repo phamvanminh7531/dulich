@@ -44,12 +44,12 @@
     margin-bottom: 35px;
 }
 
-a {
+.related-a {
     text-decoration: none;
     color: black;
 }
 
-a:hover{
+.related-a:hover{
     text-decoration: underline;
     
 }
