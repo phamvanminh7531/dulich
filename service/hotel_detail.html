@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../images/brand.ico">
+    <link rel="icon" type="image/x-icon" href="../images/brand.ico">
+    <title>Du Lich Bình Dương</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">
+    <script src="../js/dragble-images.js"></script>
+    <script src="https://kit.fontawesome.com/065d57b73d.js" crossorigin="anonymous"></script>
+</head>
+<style>
+  .section-container {
+    margin-top: 100px;
+  }
+  #product-details .price {
+    color: red;
+  }
+  #product-details .introduction {
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+  .product-container {
+    margin-bottom: 30px;
+  }
+
+  .product-container h2 {
+    margin-top: 0;
+  }
+
+  .product-container h3 {
+    margin-top: 30px;
+  }
+  .custom-image {
+    max-width: 100%;
+    height: 300px;
+  }
+  .introduction {
+    max-height: 300px;
+    overflow: auto;
+  }
+</style>
+<body>
+  <nav class="navbar navbar-expand-lg nav fixed-top">
+    <div class="container">
+        <a class="navbar-brand pl-5" href="../index/index.html">
+            <img src="../images/brand.png" width="100%" height="50" class="d-inline-block align-top" alt="">
+        </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 nav-ul">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="../index/index.html">Trang Chủ</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Danh Sách Điểm Đến</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="../place_list/di_tich_lich_su_list_1.html">Di Tích Lịch Sử</a></li>
+                <li><a class="dropdown-item" href="../place_list/danh_lam_thang_canh_1.html">Danh Lam Thắng Cảnh</a></li>
+                <li><a class="dropdown-item" href="../place_list/lang_nghe_truyen_thong_1.html">Làng Nghề Truyền Thống</a></li>
+                <li><a class="dropdown-item" href="../place_list/khu_du_lich_1.html">Khu Du Lịch</a></li>
+                <li><a class="dropdown-item" href="../place_list/khu_vui_choi_1.html">Khu Vui Chơi, Khu Mua Sắm</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Dịch Vụ</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="../service/hotel.html">Khách Sạn</a></li>
+                  <li><a class="dropdown-item" href="../service/restaurant.html">Nhà Hàng</a></li>
+                  <li><a class="dropdown-item" href="../service/car.html">Thuê Xe</a></li>
+                  <li><a class="dropdown-item" href="../service/tour.html">Tour Du Lịch</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">Tin Tức</a>
+              </li>
+            
+            </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <section class="section-container">
+    <div class="container">
+        <div id="product-details">
+            <!-- Nội dung chi tiết sản phẩm sẽ được tạo động tại đây -->
+        </div>
+    </div>
+</section>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+      var urlParams = new URLSearchParams(window.location.search);
+      var productId = urlParams.get('id');
+
+      showProductDetail(productId);
+  });
+
+  var isFormVisible = false;
+
+  var products = {
+      "1": {
+          "title": "KHÁCH SẠN ĐẠI NAM",
+          "price": "2.410.000₫",
+          "location": "1765A, Đại Lộ Bình Dương, Phường Hiệp An, Thủ Dầu Một, Bình Dương, Việt Nam",
+          "images": [
+              "../images/dainamhotel.jpg",
+              "../images/dainam1.jpg",
+              "../images/dainam2.jpg",
+          ],
+          "description": "Đỗ xe và Wi-Fi luôn miễn phí, vì vậy quý khách có thể giữ liên lạc, đến và đi tùy ý. Nằm ở vị trí trung tâm tại Thủ Dầu Một của Bình Dương, chỗ nghỉ này đặt quý khách ở gần các điểm thu hút và tùy chọn ăn uống thú vị. Mát-xa, bể bơi ngoài trời và xông khô là một trong những tiện nghi đặc biệt sẽ nâng cao kỳ nghỉ của quý khách với sự tiện lợi ngay trong khuôn viên."
+      },
+      "2": {
+          "title": "KHÁCH SẠN MIRA",
+          "price": "1.100.000₫",
+          "location": "555B, Đại lộ Bình Dương, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương, Việt Nam",
+          "images": [
+              "../images/mirahotel.jpg",
+              "../images/mira1.jpg",
+              "../images/mira2.jpg",
+          ],
+          "description": "Đỗ xe và Wi-Fi luôn miễn phí, vì vậy quý khách có thể giữ liên lạc, đến và đi tùy ý. Nằm ở vị trí trung tâm tại Thủ Dầu Một của Bình Dương, chỗ nghỉ này đặt quý khách ở gần các điểm thu hút và tùy chọn ăn uống thú vị. Được xếp hạng 5 sao, chỗ nghỉ chất lượng cao này cho phép khách nghỉ sử dụng mát-xa, bể bơi ngoài trời và bồn tắm nước nóng ngay trong khuôn viên."
+      },
+      "3": {
+          "title": "KHÁCH SẠN BECAMEX",
+          "price": "850.000₫",
+          "location": "Thành Phố Thủ Dầu Một, Tỉnh Bình Dương, Việt Nam",
+          "images": [
+              "../images/becamexhotel.jpg",
+              "../images/becamex1.jpg",
+              "../images/becamex2.jpg",
+          ],
+          "description": "Đỗ xe và Wi-Fi luôn miễn phí, vì vậy quý khách có thể giữ liên lạc, đến và đi tùy ý. Nằm ở vị trí trung tâm tại Thủ Dầu Một của Bình Dương, chỗ nghỉ này đặt quý khách ở gần các điểm thu hút và tùy chọn ăn uống thú vị. Được xếp hạng 5 sao, chỗ nghỉ chất lượng cao này cho phép khách nghỉ sử dụng mát-xa, bể bơi ngoài trời và bồn tắm nước nóng ngay trong khuôn viên."
+      },
+      "4": {
+          "title": "KHÁCH SẠN BCON",
+          "price": "1.870.000₫",
+          "location": "Thành Phố Thủ Dầu Một, Tỉnh Bình Dương, Việt Nam",
+          "images": [
+              "../images/bconhotel.jpg",
+              "../images/bcon1.jpg",
+              "../images/bcon2.jpg",
+          ],
+          "description": "Đỗ xe và Wi-Fi luôn miễn phí, vì vậy quý khách có thể giữ liên lạc, đến và đi tùy ý. Nằm ở vị trí trung tâm tại Thủ Dầu Một của Bình Dương, chỗ nghỉ này đặt quý khách ở gần các điểm thu hút và tùy chọn ăn uống thú vị. Được xếp hạng 5 sao, chỗ nghỉ chất lượng cao này cho phép khách nghỉ sử dụng mát-xa, bể bơi ngoài trời và bồn tắm nước nóng ngay trong khuôn viên."
+      },
+      "5": {
+          "title": "KHÁCH SẠN DIAMOND",
+          "price": "700.000₫",
+          "location": "Thành Phố Thủ Dầu Một, Tỉnh Bình Dương, Việt Nam",
+          "images": [
+              "../images/diamondhotel.jpg",
+              "../images/diamond1.jpg",
+              "../images/diamond2.jpg",
+          ],
+          "description": "Đỗ xe và Wi-Fi luôn miễn phí, vì vậy quý khách có thể giữ liên lạc, đến và đi tùy ý. Nằm ở vị trí trung tâm tại Thủ Dầu Một của Bình Dương, chỗ nghỉ này đặt quý khách ở gần các điểm thu hút và tùy chọn ăn uống thú vị. Được xếp hạng 5 sao, chỗ nghỉ chất lượng cao này cho phép khách nghỉ sử dụng mát-xa, bể bơi ngoài trời và bồn tắm nước nóng ngay trong khuôn viên."
+      },
+      "6": {
+          "title": "KHÁCH SẠN NỮ HOÀNG",
+          "price": "550.000₫",
+          "location": "Thành Phố Thủ Dầu Một, Tỉnh Bình Dương, Việt Nam",
+          "images": [
+              "../images/nuhoanghotel.jpg",
+              "../images/nuhoang1.jpg",
+              "..images/nuhoang2.jpg",
+          ],
+          "description": "Đỗ xe và Wi-Fi luôn miễn phí, vì vậy quý khách có thể giữ liên lạc, đến và đi tùy ý. Nằm ở vị trí trung tâm tại Thủ Dầu Một của Bình Dương, chỗ nghỉ này đặt quý khách ở gần các điểm thu hút và tùy chọn ăn uống thú vị. Được xếp hạng 5 sao, chỗ nghỉ chất lượng cao này cho phép khách nghỉ sử dụng mát-xa, bể bơi ngoài trời và bồn tắm nước nóng ngay trong khuôn viên."
+      },
+      "7": {
+          "title": "KHÁCH SẠN THIÊN HÀ",
+          "price": "1.400.000₫",
+          "location": "Thành Phố Thủ Dầu Một, Tỉnh Bình Dương, Việt Nam",
+          "images": [
+              "../images/thienhahotel.jpg",
+              "../images/thienha1.jpg",
+              "../images/thienha2.jpg",
+          ],
+          "description": "Đỗ xe và Wi-Fi luôn miễn phí, vì vậy quý khách có thể giữ liên lạc, đến và đi tùy ý. Nằm ở vị trí trung tâm tại Thủ Dầu Một của Bình Dương, chỗ nghỉ này đặt quý khách ở gần các điểm thu hút và tùy chọn ăn uống thú vị. Được xếp hạng 5 sao, chỗ nghỉ chất lượng cao này cho phép khách nghỉ sử dụng mát-xa, bể bơi ngoài trời và bồn tắm nước nóng ngay trong khuôn viên."
+      },
+      "8": {
+          "title": "KHÁCH SẠN KMY",
+          "price": "850.000₫",
+          "location": "Thành Phố Thủ Dầu Một, Tỉnh Bình Dương, Việt Nam",
+          "images": [
+              "../images/kmyhotel.jpg",
+              "../images/kmy1.jpg",
+              "../images/kmy2.jpg",
+          ],
+          "description": "Đỗ xe và Wi-Fi luôn miễn phí, vì vậy quý khách có thể giữ liên lạc, đến và đi tùy ý. Nằm ở vị trí trung tâm tại Thủ Dầu Một của Bình Dương, chỗ nghỉ này đặt quý khách ở gần các điểm thu hút và tùy chọn ăn uống thú vị. Được xếp hạng 5 sao, chỗ nghỉ chất lượng cao này cho phép khách nghỉ sử dụng mát-xa, bể bơi ngoài trời và bồn tắm nước nóng ngay trong khuôn viên."
+      }
+  };
+
+  function showProductDetail(productId) {
+      var product = products[productId];
+      var productDetailsContainer = document.getElementById('product-details');
+
+      // Create an empty string to hold all the image elements
+      var imagesHtml = '';
+
+      // Loop through the array of images for the current product and create image elements
+      product.images.forEach(function (imageUrl) {
+          imagesHtml += `
+              <div class="col-md-4">
+                  <img src="${imageUrl}" alt="${product.title}" class="img-fluid custom-image">
+              </div>
+          `;
+      });
+
+      // Update the productDetailsContainer HTML to include the images and other product details
+      productDetailsContainer.innerHTML = `
+          <div class="product-container">
+              <div class="row">
+                  ${imagesHtml}
+                  <div class="col-md-8">
+                      <!-- Display the product title, price, location, and buttons -->
+                      <h2>${product.title}</h2>
+                      <p class="price">Giá: ${product.price}</p>
+                      <p class="location">Địa điểm: ${product.location}</p>
+                      <button class="btn btn-primary" onclick="toggleBookingForm()">Đặt Phòng</button>
+                      <button class="btn btn-primary">Gọi Phòng</button>
+                  </div>
+              </div>
+              <div class="row mt-4">
+                  <div class="col-md-12 introduction">
+                      <!-- Display the product description -->
+                      <h3>Giới Thiệu Khách Sạn:</h3>
+                      <p>${product.description}</p>
+                  </div>
+              </div>
+          </div>
+      `;
+
+      // Get all the image elements with the 'custom-image' class and add click event listeners to each
+      var imageElements = document.querySelectorAll('.custom-image');
+      imageElements.forEach(function (imageElement) {
+          imageElement.addEventListener('click', function () {
+              // When an image is clicked, call the 'showImageBox' function with the image URL as an argument
+              showImageBox(imageElement.src);
+          });
+      });
+  }
+
+  function toggleBookingForm() {
+      var formHtml = `
+          <div class="row mt-4 booking-form">
+              <div class="col-md-12">
+                  <form>
+                      <div class="form-group">
+                          <label for="name">Họ và tên:</label>
+                          <input type="text" class="form-control" id="name" placeholder="Nhập họ và tên">
+                      </div>
+                      <div class="form-group">
+                          <label for="email">Email:</label>
+                          <input type="email" class="form-control" id="email" placeholder="Nhập địa chỉ email">
+                      </div>
+                      <div class="form-group">
+                          <label for="phone">Số điện thoại:</label>
+                          <input type="tel" class="form-control" id="phone" placeholder="Nhập số điện thoại">
+                      </div>
+                      <div class="form-group">
+                          <label for="message">Lời nhắn:</label>
+                          <textarea class="form-control" id="message" rows="4" placeholder="Nhập lời nhắn"></textarea>
+                      </div>
+                      <button type="submit" class="btn btn-primary">Đặt Phòng</button>
+                  </form>
+              </div>
+          </div>
+      `;
+      var productDetailsContainer = document.getElementById('product-details');
+      if (!isFormVisible) {
+          productDetailsContainer.innerHTML += formHtml;
+          isFormVisible = true;
+      } else {
+          productDetailsContainer.innerHTML = productDetailsContainer.innerHTML.replace(formHtml, '');
+          isFormVisible = false;
+      }
+  }
+  function showImageBox(imageUrl) {
+      var imageBox = document.createElement('div');
+      imageBox.classList.add('image-box');
+      var imageElement = document.createElement('img');
+      imageElement.src = imageUrl;
+      imageBox.appendChild(imageElement);
+      document.body.appendChild(imageBox);
+      imageBox.addEventListener('click', function () {
+          document.body.removeChild(imageBox);
+      });
+  }
+</script>
+
+  <footer>
+    <footer class="footer">
+        <div class="container">
+          <div class="row py-3">
+            <div class="col-xl-6">
+              <div class="row">
+                <div class="col-4">
+                  <img src="../images/brand.png" width="100%" height="100" class="d-inline-block align-top" alt="">
+                </div>
+                <div class="col-8">
+                  <h1 class="footer-head-text">TRUNG TÂM DU LỊCH TỈNH BÌNH DƯƠNG</h1>
+                </div>
+              </div>
+              <div class="row mt-5">
+                <div class="col footer-text">
+                  <p>Địa chỉ: 350 Nguyễn Chí Thanh, Khu 3, Phường Hiệp An, Thủ Dầu Một, Bình Dương</p>
+                  <p>Điện thoại: <a href=”tel:113″>0942 424 424</a></p>
+                  <p>Email: trungtamdulichbinhduong@email.com</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6 text-center p-4">
+              <iframe class="gmap-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d250665.36656319685!2d106.35887859453125!3d10.990043600000007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3174d117800fe90f%3A0xe66d67d4e06ab329!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBCw6xuaCBExrDGoW5n!5e0!3m2!1svi!2s!4v1689528907099!5m2!1svi!2s"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+        </div>
+      </footer>
+  </footer>
+</body>
+</html>

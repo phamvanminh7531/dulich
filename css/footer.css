@@ -16,6 +16,12 @@
     font-size: 1vw;
   }
   
-  p {
+  .footer p {
     font-size: clamp(19px, 1.6vw, 25px);
+  }
+
+  .footer a {
+    font-size: clamp(19px, 1.6vw, 25px);
+    color: #fdb917;
+    text-decoration: none !important;
   }
